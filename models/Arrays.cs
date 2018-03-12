@@ -6,11 +6,29 @@ using System.Threading.Tasks;
 
 namespace Assignment2_200383477.models
 {
+
     class Arrays
     {
         //The string arrays having details 
         string[] strings = new string[] { "Maulika", "Desai", "Computer Programmer", "Georgian College", "Barrie" };
         int[] integer = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+
+    
+        public void ArrayOfObjects()
+        {
+            Employee[] employees = new Employee[5];
+            employees[0] = new Employee("Maulika", "Desai", "Manager", 1, 456.56);
+            employees[1] = new Employee("Komal", "Bhanderi", "Crew Member", 2, 343.34);
+
+
+
+            for (int i = 0; i < employees.Length; i++)
+            {
+                Console.WriteLine(employees[i].ToString());
+            }
+        }
+
 
         public void InterateOverStringArrayUsingFor()
         {
@@ -33,7 +51,7 @@ namespace Assignment2_200383477.models
                 s++;
                 Console.WriteLine(strings[s]);
             }
-            while (s < strings.Length);
+            while (s < strings.Length)
         }
 
         //The integer arrays 
@@ -58,7 +76,7 @@ namespace Assignment2_200383477.models
                 i++;
                 Console.WriteLine(integer[i]);
             }
-            while (i < integer.Length);
+            while (i < integer.Length)
         }
     }
 }
