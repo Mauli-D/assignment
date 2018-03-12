@@ -8,6 +8,18 @@ namespace Assignment2_200383477.models
 {
     class Employee
     {
+
+        public Employee() { }
+        public Employee(string fname, string lname, string position, int employeeNumber, double salary)
+        {
+            FirstName = fname;
+            LastName = lname;
+            EmployeePosition = position;
+            EmployeeNumber = employeeNumber;
+            Salary = salary;
+
+        }
+
         //sets the property for first name of the employee and returns it
         public String FirstName { get; set; }
         //sets the property for last name of the employee and returns it
@@ -17,12 +29,12 @@ namespace Assignment2_200383477.models
         //sets the property for employee number of the employee and returns it
         public int EmployeeNumber { get; set; }
         //sets the property for salary of the employee and returns it
-        public double salary { get; set; }
+        public Double Salary { get; set; }
 
         //this property returns the data into a string of objects
         public override string ToString()
         {
-            return "\nEmployee Name: " + FirstName + LastName + " \nPosition: " + EmployeePosition + " \nEmployee Number: " + EmployeeNumber + " \nWeekly Salary: $" + salary;
+            return "\nEmployee Name: " + FirstName + LastName + " \nPosition: " + EmployeePosition + " \nEmployee Number: " + EmployeeNumber + " \nWeekly Salary: $" + Salary;
         }
     }
 }
